@@ -5,13 +5,8 @@
     
 }
 
-.headings{
-    display: flex;
-    border: 2px solid red;
-    
-}
-
-.headings img{
-    width: 65px;
-    margin-left:10px;
+.exercise-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }

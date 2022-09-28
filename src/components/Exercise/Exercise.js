@@ -1,25 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Exercise.css'
 import logo from '../../images/logo.png'
+import DailyWork from '../DailyWork/DailyWork';
 
 const Exercise = () => {
+    const [routine, setRoutine] = useState([])
+    
+    useEffect(() => {
+        fetch('fakeData.json')
+            .then(res => res.json())
+        .then(data=>setRoutine(data))
+    }, [])
+    
     return (
         <div className='homePage'>
-            <div className='headings'>
-                <img src={logo} alt="" />
-                <h1>Loose To Gain</h1>
+            <div >
+                <h1>Loose to Gain</h1>
+                <div className='exercise-container'>
+                    {
+                        routine.map(work => <DailyWork
+                            key={work.id}
+                            routine={work}
+                        ></DailyWork>)
+                    }
+
+                </div>
             </div>
 
-            <div>
-                <h3>This is Cart</h3>
+            <div className='cart-container'>
+                <h1>This is Cart</h1>
             </div>
-            <div>
-                <h5>Select Today's Exercise</h5>
-                <h3>Name:</h3>
-            </div>
-            <div>
                 
-            </div>
+            
         </div>
         
     );
