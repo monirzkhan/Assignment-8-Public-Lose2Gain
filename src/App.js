@@ -1,11 +1,15 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Exercise from './components/Exercise/Exercise';
+
+
 
 function App() {
   return (
     <div className="App">
-      
+      <Exercise></Exercise>
     </div>
+
   );
 }
 
