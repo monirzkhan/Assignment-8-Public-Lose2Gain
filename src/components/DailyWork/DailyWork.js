@@ -8,7 +8,7 @@ const DailyWork = (props) => {
             <img src={img} alt="" />
             <div className='routine-info'>
                 <h3>{name}</h3>
-                <p>Time: {time}minutes</p>
+                <p>Time Required: <b>{time}minutes</b></p>
             </div>
             <button className='add-btn'>Add To List</button>
         </div>

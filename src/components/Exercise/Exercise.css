@@ -2,11 +2,63 @@
     display:grid;
     grid-template-columns: 4fr 1fr;
     margin: 40px;
+    margin-top: 0;
     
 }
 
 .exercise-container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 30px;
+    
+}
+
+.headings img{
+    width: 65px;
+    margin-left: 10px;
+}
+.headings{
+    display: flex;
+    margin: 20px 0;
+}
+
+.cart-container{
+    height: 200vh;
+    width: 15vw;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px gray -5px;
+    position: sticky;
+    top: 0;
+}
+
+.personal-info img{
+width: 40px;
+height: 40px;
+border-radius: 30%;
+margin-right: 10px;
+
+}
+
+.personal-info{
+    display: flex;
+    align-items: center;
+}
+
+.personal-info h4{
+    margin: 0;
+}
+
+.personal-Data{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin:20px 5px;
+    padding: 10px;
+    background-color: #fbe2aa;
+}
+.personal-Data small{
+    color:gray;
 }
