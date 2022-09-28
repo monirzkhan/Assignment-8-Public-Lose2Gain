@@ -1,0 +1,85 @@
+.personal-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-right: 10px;
+
+}
+
+.personal-info {
+    display: flex;
+    align-items: center;
+}
+
+.personal-info h4 {
+    margin: 0;
+}
+
+.personal-Data {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin: 20px 5px;
+    padding: 10px;
+    background-color: #fbe2aa;
+}
+
+.personal-Data small {
+    color: gray;
+}
+
+.break-btn {
+    padding: 9px;
+    background-color: rgb(219, 214, 214);
+    border-radius: 50%;
+    border: none;
+    margin-left: 5px;
+    color: black;
+
+
+}
+
+.break {
+    background-color: #fbe2aa;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.break-btn:hover {
+    background-color: #063970;
+    color: white;
+}
+
+.exercise-time, .break-time{
+    background-color: #fbe2aa;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exercise-time h4,
+.break-time h4{
+    margin-top:0;
+    margin-bottom: 0;
+}
+.exercise-time p, 
+.break-time p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: gray;
+}
+
+.completed-btn{
+    margin: 40px 15px;
+    background-color: #063970;
+    color:white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+
+}
