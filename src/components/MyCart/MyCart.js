@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import photo from '../../images/Monir Photo 01.jpg'
 import './MyCart.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationArrow } from '@fortawesome/free-solid-svg-icons'
 
-const MyCart = () => {
+const MyCart = (props) => {
+    const [breakTime, setBreakTime] = useState(0);
+    const { cart } = props;
+    let newTime = 0;
+    for (const routine of cart) {
+        newTime = newTime + routine.time;
+        
+    }
+
+    
+    const increase = (time) => {
+           const newBreakTime = time ;
+        setBreakTime(newBreakTime);
+        }
+    
+        
+    
     return (
         <div>
             <div className='personal-info'>
@@ -31,20 +47,20 @@ const MyCart = () => {
             </div>
             <h4>Add A Break</h4>
             <div className='break'>
-                <button className='break-btn'>20s</button>
-                <button className='break-btn'>40s</button>
-                <button className='break-btn'>50s</button>
-                <button className='break-btn'>60s</button>
+                <button onClick={()=>increase(20)} className='break-btn'><span>20</span>s</button>
+                <button onClick={() => increase(40)} className='break-btn'>40s</button>
+                <button onClick={() => increase(50)} className='break-btn'>50s</button>
+                <button onClick={() => increase(60)} className='break-btn'>60s</button>
 
             </div>
             <h4>Exercise Details</h4>
             <div className='exercise-time'>
                 <h4>Exercise Time</h4>
-                <p><span>0</span>minutes</p>
+                <p><span>{newTime}</span>minutes</p>
             </div>
             <div className='break-time'>
                 <h4>Break Time</h4>
-                <p><span>0</span>seconds</p>
+                <p><span id='break-time-inner-text'>{breakTime}</span>seconds</p>
             </div>
             <div>
                 <button className='completed-btn'>Exercise Completed</button>

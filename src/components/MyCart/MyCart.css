@@ -9,6 +9,7 @@
 .personal-info {
     display: flex;
     align-items: center;
+    margin-top: 20px;
 }
 
 .personal-info h4 {
@@ -20,7 +21,7 @@
     justify-content: space-between;
     border: 1px solid gray;
     border-radius: 10px;
-    margin: 20px 5px;
+    margin: 40px 5px;
     padding: 10px;
     background-color: #fbe2aa;
 }
